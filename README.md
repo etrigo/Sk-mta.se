@@ -8,3 +8,7 @@ Skall bli en skämtgenerator som innehåller följande programeringsaspekter.<br
 - Databas<br>
 <br>
 Det skall bli en mycket enkel onePage-sajt med en enda funktion. När man klickar på en knapp skall ett slumpmässigt skämt hämtas från databasen och renderas på skärmen. Man skall kunna rendera nya skämt genom att klicka igen dock skall redan renderade skämt inte visas igen.<br>
+<br>
+<b>Processen - tidsuppskattning/tidsåtgång<b><br>
+1. Skapa prototyp i Adobe XD - 3.00/
+2. 
