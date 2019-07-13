@@ -27,5 +27,18 @@ font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Montserrat', sans-serif;
 -->
 
-FÄRGER
+FÄRGER<br>
+
+Regler för knappen<br>
+- onLoad:             skapa cookie, get cookie, check cookie
+- onLoad:             dölj elemet för skämt
+- Vid klick:          animera klick
+- Efter animering:    hämta random skämt i db
+- Efter animering:    kolla om skämtID finns lagrat i cookie 
+- Om lagrat:          hämta nytt skämt
+- om inte lagrat:     lagra skämtID i cookie
+- om inte lagrat:     styla elementet för skämt
+- om inte lagrat:     visa elementet
+- om inte lagrat:     infoga skämtet i elementet
+- efter infogat:      byt värde "skämta" mot "igen" i knappen
 
