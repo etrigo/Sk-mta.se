@@ -17,3 +17,15 @@ Det skall bli en mycket enkel onePage-sajt med en enda funktion. När man klicka
 5. Skapa JavaScript - 8.00/<br>
 6. Skapa databasen - <br>
 7. Koppla databasen - <br>
+
+FONTER
+Header: Gloria Hallelujah (Google)
+Paragraph: Montserrat (Google)
+<!--
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Montserrat&display=swap" rel="stylesheet">
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Montserrat', sans-serif;
+-->
+
+FÄRGER
+
