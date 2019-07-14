@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  }
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* font size on different media */
+@media screen and (min-width: 993px) {
+  h1 {font-size: 2vw;}
+  h2 {font-size: 1.75vw;}
+  h3 {font-size: 1.5vw;}
+  h4 {font-size: 1.5vw;}
+  h5 {font-size: 0.75vw;}
+  h6 {font-size: 1.5vw;}
+  p {font-size: 1em;}
+  
+  /*#strongBalls {
+    font-size: 6vw;
+  }*/
+}
+
+@media screen and (max-width: 992px) {
+  h1 {font-size: 4vw;}
+  h2 {font-size: 2,75vw;}
+  h3 {font-size: 2.25vw;}
+  h4 {font-size: 2.25vw;}
+  h5 {font-size: 0.75vw;}
+  h6 {font-size: 1.5vw;}
+  p {font-size: 1em;}
+
+  /*#strongBalls {
+    font-size: 8vw;
+  }*/
+}
+@media screen and (max-width: 600px) {
+  h1 {font-size: 5vw;}
+  h2 {font-size: 3.5vw;}
+  h3 {font-size: 3vw;}
+  h4 {font-size: 2.5vw;}
+  h5 {font-size: 1.75vw;}
+  h6 {font-size: 1.5vw;}
+  p {font-size: 1em;}
+  
+  /*#strongBalls {
+    font-size: 9vw;
+  }*/
+}
+
+
+
+/* font colors*/
+h1, h2, h3, h4, h5, h6 {color: #FFF5B0}
+p {color: #80d4ff;}

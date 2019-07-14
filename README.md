@@ -11,12 +11,13 @@ Det skall bli en mycket enkel onePage-sajt med en enda funktion. När man klicka
 <br>
 <b>Processen - tidsuppskattning/tidsåtgång</b><br>
 1. Skapa prototyp i Adobe XD - 3.00/<br>
-2. Skapa HTML - 2.00/<br>
-3. Skapa CSS - 5.00/<br>
+2. Skapa HTML - 5.00/<br>
+3. Skapa CSS - 10.00/<br>
 4. Skapa JavaScript-regler - 1.00/<br>
 5. Skapa JavaScript - 8.00/<br>
-6. Skapa databasen - <br>
-7. Koppla databasen - <br>
+6. Skapa Cookies
+7. Skapa databasen - <br>
+8. Koppla databasen - <br>
 
 FONTER
 Header: Gloria Hallelujah (Google)
