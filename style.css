@@ -28,11 +28,11 @@ p {
   h6 {font-size: 1.5vw;}
   p {font-size: 1em;}
   
-  #strongHead {
+  .strongHead {
     font-size: 6vw;
   }
 
-  #strongGen {
+  .strongGen {
     font-size: 2.75vw;
     margin-right: 50px;
     margin-top: 25px;
@@ -42,9 +42,10 @@ p {
     display: block;
   }
 
-  /*adMedium, #headSmall {
-    display: none;
-  }*/
+  .headLine {
+    stroke-width: 1px;
+    stroke-linecap: round;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -56,11 +57,11 @@ p {
   h6 {font-size: 1.5vw;}
   p {font-size: 1em;}
 
-  #strongHead {
+  .strongHead {
     font-size: 8vw;
   }
   
-  #strongGen {
+  .strongGen {
     font-size: 3.75vw;
     margin-right: 20px;
     margin-top: 10px;
@@ -70,9 +71,10 @@ p {
     display: block;
   }
 
-  /*#headLarge, #headSmall {
-    display: none;
-  }*/
+  .headLine {
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -84,11 +86,11 @@ p {
   h6 {font-size: 1.5vw;}
   p {font-size: 1em;}
   
-  #strongHead {
+  .strongHead {
     font-size: 9vw;
   }
 
-  #strongGen {
+  .strongGen {
     font-size: 4.5vw;
     margin-right: 20px;
     margin-top: 17px;
@@ -101,6 +103,11 @@ p {
   #headMedium {
     display: none;
   }
+
+  .headLine {
+    stroke-width: 2px;
+    stroke-linecap: round;
+  }
 }
 
 
@@ -109,23 +116,20 @@ p {
 h1, h2, h3, h4, h5, h6 {color: #FFF5B0}
 p {color: #80d4ff;}
 
-/*#firstHeadPoly {
-  width: 100vw;
-
-}*/
-
-#strongHead {
+.strongHead {
   transform: rotate(-4deg);
   text-align: center;
+  text-shadow: 2px 2px 2px #999999;
 }
 
-#strongGen {
+.strongGen {
   transform: rotate(4deg);
   vertical-align: bottom;
   float: right;
+  text-shadow: 2px 2px 2px #999999;
 }
 
-#headSvg {
+.headSvg {
   position: absolute;
   top: 0;
   left: 0;
@@ -149,6 +153,54 @@ p {color: #80d4ff;}
   fill: #FFC7B0;
 }
 
-#strongHead, #strongGen {
-  filter: url(#f1);
+.headLine {
+  stroke: #FFF5B0;
+}
+
+#mainSec {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+}
+
+#jokerBox {
+  margin: auto;
+  margin-bottom: 20px;
+  border:3px solid #80d4ff;
+  border-radius: 0 30px 0 30px;
+  color: #80d4ff;
+  font-weight: bold;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  font-size: 20px;
+  display: none;
+  transition-duration: 1s;
+}
+
+#jokeButton {
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: 2px 2px 2px #999999;
+  outline: none;
+  background-color: #FFC7B0;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 9px #999;
+}
+
+#jokeButton:hover {
+  background-color: #80d4ff
+}
+
+#jokeButton:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

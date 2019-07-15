@@ -30,58 +30,40 @@
 <body>
   <header>
     <div id="headSmall">
-      <h1 id="strongHead">skämta.se</h1>
-      <h2 id="strongGen" >skämtgeneratorn</h2>
-      <svg id="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none">
-        <defs>
-          <filter id="f1" x="0" y="0" width="200%" height="200%">
-            <feOffset result="offOut" in="SourceAlpha" dx="1" dy="1" />
-            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
-            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-          </filter>
-        </defs>
+      <h1 class="strongHead">skämta.se</h1>
+      <h2 class="strongGen" >skämtgeneratorn</h2>
+      <svg class="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none">
         <polygon id="headPolyTwo" points="25,25 100,20, 100,30" />
         <polygon id="headPolyOne" points="0,0 100,0 100,20 0,30" />
-        <line id="headLine" x1="26" y1="17" x2="76" y2=14 style="stroke: #FFF5B0; stroke-width: 2px" stroke-linecap="round"/>
+        <line class="headLine" x1="26" y1="17" x2="76" y2=14 />
       </svg>
     </div>
     <div id="headMedium">
-        <h1 id="strongHead">skämta.se</h1>
-        <h2 id="strongGen" >skämtgeneratorn</h2>
-        <svg id="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25" preserveAspectRatio="none">
-          <defs>
-            <filter id="f1" x="0" y="0" width="200%" height="200%">
-              <feOffset result="offOut" in="SourceAlpha" dx="1" dy="1" />
-              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
-              <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-            </filter>
-          </defs>
+        <h1 class="strongHead">skämta.se</h1>
+        <h2 class="strongGen" >skämtgeneratorn</h2>
+        <svg class="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25" preserveAspectRatio="none">
           <polygon id="headPolyTwo" points="25,20 100,15, 100,25" />
           <polygon id="headPolyOne" points="0,0 100,0 100,15 0,25" />
-          <line id="headLine" x1="30" y1="17" x2="72" y2=14 style="stroke: #FFF5B0; stroke-width: 1.5px" stroke-linecap="round"/>
+          <line class="headLine" x1="30" y1="17" x2="72" y2=14 />
         </svg>
       </div>
       <div id="headLarge">
-          <h1 id="strongHead">skämta.se</h1>
-          <h2 id="strongGen" >skämtgeneratorn</h2>
-          <svg id="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none">
-            <defs>
-              <filter id="f1" x="0" y="0" width="200%" height="200%">
-                <feOffset result="offOut" in="SourceAlpha" dx="1" dy="1" />
-                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
-                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-              </filter>
-            </defs>
+          <h1 class="strongHead">skämta.se</h1>
+          <h2 class="strongGen" >skämtgeneratorn</h2>
+          <svg class="headSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none">
             <polygon id="headPolyTwo" points="25,15 100,10, 100,20" />
             <polygon id="headPolyOne" points="0,0 100,0 100,10 0,20" />
-            <line id="headLine" x1="35" y1="11" x2="66" y2=9 style="stroke: #FFF5B0; stroke-width: 1px" stroke-linecap="round"/>
+            <line class="headLine" x1="35" y1="11" x2="66" y2=9 />
           </svg>
         </div>
   </header>
-  <section>
+  <section id="mainSec">
     <div>
-
+      <p id="jokerBox">test</p>
     </div>
+    <form>
+      <button id="jokeButton"><h1>skämta</h1></button>
+    </form>
   </section>
   <footer>
     <section id="footerOne">
