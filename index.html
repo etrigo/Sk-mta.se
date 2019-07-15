@@ -21,9 +21,10 @@
   <meta property="og:description" content="add some content" />
 
   <!-- links -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <script type="text/javascript" src="script.js"></script>
   <script src="https://kit.fontawesome.com/af3582c51f.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  
   <!--<link rel="icon" href="/img/chokladbollar-icon.ico" type="image/x-icon" />-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Montserrat&display=swap">
 </head>
@@ -58,12 +59,13 @@
         </div>
   </header>
   <section id="mainSec">
-    <div>
-      <p id="jokerBox">test</p>
+    <div id="jokerBox" class="jokerBox">
+      <p>test</p>
     </div>
-    <form>
-      <button id="jokeButton"><h1>skämta</h1></button>
-    </form>
+    <button id="jokerButton" onclick="joker()" ><h1 id="jokerButtonText" >skämta</h1></button>
+    <!--form>
+      
+    </form>-->
   </section>
   <footer>
     <section id="footerOne">

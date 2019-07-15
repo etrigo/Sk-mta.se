@@ -165,7 +165,9 @@ p {color: #80d4ff;}
   padding-top: 30px;
 }
 
-#jokerBox {
+
+
+.jokerBox {
   margin: auto;
   margin-bottom: 20px;
   border:3px solid #80d4ff;
@@ -178,11 +180,17 @@ p {color: #80d4ff;}
   background-color: #ffffff;
   font-size: 20px;
   display: none;
-  transition-duration: 1s;
+  
+  opacity: 1;
+  max-height: 500px;
+  transition: 2s;
+  /*transition: display 0.6s, opacity 0.6s, max-height 0.6s linear;*/
 }
 
-#jokeButton {
+
+#jokerButton {
   margin: auto;
+  margin-bottom: 30px;
   height: 150px;
   width: 150px;
   font-size: 24px;
@@ -196,11 +204,173 @@ p {color: #80d4ff;}
   box-shadow: 0 9px #999;
 }
 
-#jokeButton:hover {
+#jokerButton:hover {
   background-color: #80d4ff
 }
 
-#jokeButton:active {
+#jokerButton:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+/* styling for footer*/
+h4 {
+  text-align: center;
+  padding: 30px;
+}
+
+footer {
+  border-top: 5px solid #00C9AC;
+}
+
+#footerOne {
+  background-color: #DFE0DF;
+  text-align: center;
+  padding: 10px;
+}
+#footerOne p {
+  padding: 10px;
+  font-weight: bold;
+  color: #663300;
+}
+
+#footerOne form {
+  padding: 10px;
+}
+
+#footerOne form input {
+  padding: 10px;
+  border: 3px solid #00C9AC;
+  border-radius: 20px;
+  color: #663300;
+  text-align: center;
+}
+
+#footerOne form input:focus {
+  outline: none;
+}
+
+#footerTwo {
+  background-color: #FFBC86;
+}
+
+
+/* The Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.8s;
+  animation-name: slideIn;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+.fab {
+  color: #663300;
+  font-size: 75px;
+  padding: 10px;
+}
+.far {
+  color: #FFBC86;
+  font-size: 85px;
+  padding: 10px;
+  -webkit-animation: rotate-scale-down 0.95s linear 5s 3 alternate both;
+  animation: rotate-scale-down 1.15s linear 5s 2 alternate both;
+}
+
+@-webkit-keyframes .far {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.closeModal {
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: #663300;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 30px;
+  background-color: #FFBC86;
+  border-top: 5px solid #663300;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #FFBC86;
+  color: white;
 }

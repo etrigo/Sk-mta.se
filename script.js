@@ -1,3 +1,24 @@
+// button
+/*window.onload = function() {
+  var jokerBox = document.getElementById("jokerBox");
+  var jokerButton = document.getElementById("jokerButton");
+  var jokerButtonText = document.getElementById("jokerButtonText");
+  
+  jokerButton.onclick = function() {
+    jokerBox.style.display = "block";
+    jokerButtonText.innerHTML = "igen!"
+  }
+}*/
+
+
+// button
+
+function joker() {
+  document.getElementById("jokerBox").style.display = "block";
+  document.getElementById("jokerButtonText").innerHTML = "igen!";
+  }
+
+
 // copy url and get modal
 window.onload = function() {
   // Get the modal
