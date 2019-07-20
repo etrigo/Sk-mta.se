@@ -1,7 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
 
 h1, h2 {
   font-family: 'Gloria Hallelujah', cursive;
@@ -15,7 +19,11 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
-  #headSmall, #headMedium, #headLarge, #footerSmall, #footerMedium, #footerLarge {
+header, footer {
+  overflow: hidden;
+}
+
+#headSmall, #headMedium, #headLarge, #footerSmall, #footerMedium, #footerLarge {
   display: none;
 }
 
@@ -51,21 +59,6 @@ p {
   #footerLarge {
     display: block;
   }
-
-  #formShare {
-    bottom: 110px;
-    left: 150px;
-    transform: rotate(8deg);
-    vertical-align: bottom;
-    text-align: center
-    }
-
-  #footerShareSite {
-    bottom: 75px;
-    right: 250px;
-    transform: rotate(-5.5deg);
-    vertical-align: bottom;
-    }
 }
 
 @media screen and (max-width: 992px) {
@@ -99,21 +92,6 @@ p {
   #footerMedium {
     display: block;
   }
-
-  /*#formShare {
-    bottom: 105px;
-    left: 20px;
-    transform: rotate(6.5deg);
-    vertical-align: bottom;
-    text-align: center
-    }
-
-  #footerShareSite {
-    bottom: 75px;
-    right: 30px;
-    transform: rotate(-7deg);
-    vertical-align: bottom;
-    }*/  
 }
 
 @media screen and (max-width: 600px) {
@@ -156,21 +134,7 @@ p {
   #footerMedium {
     display: none;
   }
-
-  #formShare {
-    position: fixed;
-    bottom: 40px;
-    right: 5px;
-    }
-
-  #footerShareSite {
-    position: fixed;
-    bottom: 75px;
-    left: 5px;
-    transform: rotate(8deg);
-    }
 }
-
 
 /* font colors*/
 h1, h2, h3, h4, h5, h6 {color: #FFF5B0}
@@ -184,7 +148,6 @@ p {color: #80d4ff;}
 
 .strongGen {
   transform: rotate(4deg);
-  /*vertical-align: bottom;*/
   float: right;
   text-shadow: 2px 2px 2px #999999;
 }
@@ -194,16 +157,8 @@ p {color: #80d4ff;}
   top: 0;
   left: 0;
   z-index: -1;
+  display: block;
 }
-/*
-#head {
-  position: relative;
-}
-
-#head h1 h2 {
-  position: relative;
-  width: 100%;
-}*/
 
 #headPolyOne {
   fill: #80d4ff;
@@ -219,18 +174,14 @@ p {color: #80d4ff;}
 
 #mainSec {
   display: inline-block;
-  overflow: hidden;
   width: 100%;
   text-align: center;
   margin: auto;
   padding-top: 30px;
 }
 
-
-
-.jokerBox {
+#jokerBox {
   margin: auto;
-  margin-bottom: 20px;
   border:3px solid #80d4ff;
   border-radius: 0 30px 0 30px;
   color: #80d4ff;
@@ -240,21 +191,25 @@ p {color: #80d4ff;}
   max-width: 600px;
   background-color: #ffffff;
   font-size: 20px;
-  display: none;
-  
   opacity: 1;
-  max-height: 500px;
+  /* max-height: 500px; */
   transition: 2s;
   /*transition: display 0.6s, opacity 0.6s, max-height 0.6s linear;*/
+  display: none;
+  /*-webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  Fixa egen annimation*/
 }
 
 
 #jokerButton {
   margin: auto;
+  margin-top: 30px;
   margin-bottom: 30px;
-  height: 150px;
-  width: 150px;
-  font-size: 24px;
+  height: 175px;
+  width: 175px;
   cursor: pointer;
   text-align: center;
   text-shadow: 2px 2px 2px #999999;
@@ -270,6 +225,10 @@ p {color: #80d4ff;}
 }
 
 #jokerButton:active {
+  height: 165px;
+  width: 165px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -285,11 +244,6 @@ p {color: #80d4ff;}
   text-shadow: 2px 2px 2px #999999;
 }
 
-
-footer {
-  overflow: hidden;
-}
-
 #footerOne form input {
   padding: 20px;
   border: 5px solid #80d4ff;
@@ -303,14 +257,19 @@ footer {
   outline: none;
 }
 
-#footerTwo {
+footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
   z-index: -1;
 }
 
+.footSvg {
+  display: block;
+}
+
+#footerOne {
+  position: absolute;
+  width: 100%;
+}
 
 #footPolyOne {
   fill: #80d4ff;
@@ -320,26 +279,31 @@ footer {
   fill: #FFC7B0;
 }
 
-#footerEnd {
-  width: 100%;
+#formShare {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  }
+
+#footerShareSite {
+  position: absolute;
+  bottom: 65px;
+  right: 30px;
+  cursor: pointer;
+  }
+
+#siteUrl {
+  cursor: pointer;
 }
 
-.footerGreeting {
-  
-  
-  text-align: right;
+#footerGreeting {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  text-align: left;
   padding: 10px;
   text-shadow: 2px 2px 2px #999999;
-  background-color: #80d4ff;
-  
-  
 }
-
-
-
-/*#footerShare {
-  position: fixed;
-}*/
 
 #footerShareSite, #formShare {
   display: inline-block;
@@ -356,6 +320,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
+  text-align: center;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */

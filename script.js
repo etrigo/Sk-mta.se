@@ -1,6 +1,8 @@
 function joker() {
   document.getElementById("jokerBox").style.display = "block";
+  
   document.getElementById("jokerButtonText").innerHTML = "igen!";
+  document.getElementById("footerShareSite").innerHTML = "dela skämtet";
   }
 
 function copyFunction() {
