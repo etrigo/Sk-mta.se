@@ -180,6 +180,35 @@ p {color: #80d4ff;}
   padding-top: 30px;
 }
 
+#helloBox {
+  position: relative;
+  display: block;
+  border:3px solid #80d4ff;
+  border-radius: 0 30px 0 30px;
+  color: #80d4ff;
+  font-weight: bold;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  font-size: 20px;
+  -webkit-animation-name: slideOut;
+  -webkit-animation-duration: 0.5s;
+  animation-name: slideOut;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes slideOut {
+  from {left: 0;} 
+  to {left: -600px;}
+}
+
+@keyframes slideOut {
+  from {left: 0;} 
+  to {left: -600px;}
+}
+
+
 #jokerBox {
   margin: auto;
   border:3px solid #80d4ff;
@@ -191,16 +220,25 @@ p {color: #80d4ff;}
   max-width: 600px;
   background-color: #ffffff;
   font-size: 20px;
-  opacity: 1;
   /* max-height: 500px; */
-  transition: 2s;
+  /* transition: 2s; */
   /*transition: display 0.6s, opacity 0.6s, max-height 0.6s linear;*/
   display: none;
-  /*-webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-  animation-name: fadeIn;
-  animation-duration: 2s;
-  Fixa egen annimation*/
+  /* opacity: 1; */
+  -webkit-animation-name: slideDown;
+  -webkit-animation-duration: 0.8s;
+  animation-name: slideDown;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes slideDown {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideDown {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
 }
 
 
@@ -307,15 +345,13 @@ footer {
 
 #footerShareSite, #formShare {
   display: inline-block;
-  /*position: fixed;*/
-  
 }
 
 /* The Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2; /* Sit on top */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
@@ -327,7 +363,7 @@ footer {
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
-  animation-duration: 0.8s;
+  animation-duration: 0.4s;
 }
 
 .modal-content {
@@ -342,8 +378,8 @@ footer {
 }
 
 @-webkit-keyframes slideIn {
-  from {bottom: -300px; opacity: 0} 
-  to {bottom: 0; opacity: 1}
+  from {top: -300px; opacity: 0} 
+  to {top: 0; opacity: 1}
 }
 
 @keyframes slideIn {

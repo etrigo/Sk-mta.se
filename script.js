@@ -1,8 +1,9 @@
 function joker() {
-  document.getElementById("jokerBox").style.display = "block";
-  
+  var jokerBox = document.getElementById("jokerBox");
+  jokerBox.style.display = "block";
   document.getElementById("jokerButtonText").innerHTML = "igen!";
   document.getElementById("footerShareSite").innerHTML = "dela skämtet";
+  document.getElementById("siteUrl").value = "https://skamta.se/?id765";
   }
 
 function copyFunction() {
