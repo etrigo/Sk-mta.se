@@ -43,3 +43,5 @@ Regler för knappen<br>
 - om inte lagrat:     infoga skämtet i elementet
 - efter infogat:      byt värde "skämta" mot "igen" i knappen
 
+<!-- inspiration random sql -->
+https://jackworthen.com/2017/11/27/using-the-rand-function-to-select-random-records-in-a-table-in-sql-server/
