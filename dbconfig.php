@@ -1,6 +1,6 @@
 <?php
   $host = 'localhost';
-  $dbname = '217730-skamta';
+  $dbname = 'jokesbase';
   $username = 'root';
   $password = '';
   ?>
