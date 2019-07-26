@@ -61,8 +61,7 @@
       <p>Hejsan, kul att du hittat hit. Testa generera ett skämt med knappen nedan!</p>
     </div> -->
     <div id="jokerBox" class="jokerBox">
-      <p>hejsan hoppsan</p>
-    <!-- <?php require 'dbconnect.php';?> -->
+      <p>hejsan hoppsan, testa dra ett skämt nedan!</p>
     </div>
     <button id="jokerButton" onclick="joker()"><h1 id="jokerButtonText">skämta</h1></button>
   </section>
