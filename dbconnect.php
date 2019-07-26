@@ -3,16 +3,15 @@
   require_once 'dbconfig.php';
 
   try {
-    $pdo = new PDO ("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo = new PDO ("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
     
     $sql = 'SELECT jokeID, jokes, frequency
             FROM jokes
             ORDER BY RAND()
-            Limit 100';
+            Limit 1';
     
     $q = $pdo->query($sql);
     $q->setFetchMode(PDO::FETCH_ASSOC);
-    $mysqli->set_charset("utf8");
   } catch (PDOException $e) {
     die("Could not connect to the database $dbname :" . $e->getMessage());
   }
