@@ -1,10 +1,27 @@
-function joker() {
+/*function joker() {
   var jokerBox = document.getElementById("jokerBox");
   jokerBox.style.display = "block";
   document.getElementById("jokerButtonText").innerHTML = "igen!";
   document.getElementById("footerShareSite").innerHTML = "dela skämtet";
   document.getElementById("siteUrl").value = "https://skamta.se/?id765";
+}*/
+
+/*function joker(str) {
+  var xhttp; 
+  if (str == "") {
+    document.getElementById("jokerBox").innerHTML = "";
+    return;
   }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("jokerBox").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "dbconnect.php?q="+str, true);
+  xhttp.send();
+}*/
+
 
 function copyFunction() {
   document.getElementById("siteUrl").select();

@@ -31,7 +31,7 @@
 <body>
   <header>
     <div>
-      <a href="/"> <h1 class="strongHead">skämta.se</h1></a>
+      <a href="/sk-mta.se/index.php"> <h1 class="strongHead">skämta.se</h1></a>
       <h2 class="strongGen" >skämtgeneratorn</h2>
     </div>
     <div id="headSmall">
@@ -61,7 +61,8 @@
       <p>Hejsan, kul att du hittat hit. Testa generera ett skämt med knappen nedan!</p>
     </div> -->
     <div id="jokerBox" class="jokerBox">
-      <p>test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller? test, kör på för allt det går. hejsan hoppsan. luktar det skämt eller?</p>
+      <p>hejsan hoppsan</p>
+    <!-- <?php require 'dbconnect.php';?> -->
     </div>
     <button id="jokerButton" onclick="joker()"><h1 id="jokerButtonText">skämta</h1></button>
   </section>
