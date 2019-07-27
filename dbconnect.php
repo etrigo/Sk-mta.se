@@ -1,5 +1,5 @@
 <?php
-  require_once 'dbconfig.php';
+  require_once '../../dbconfig/dbconfig_skamta.php';
   try {
     $pdo = new PDO ("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
     $sql = 'SELECT jokeID, jokes, frequency
