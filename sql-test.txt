@@ -1,0 +1,84 @@
+From: https://jackworthen.com/2017/11/27/using-the-rand-function-to-select-random-records-in-a-table-in-sql-server/
+
+CREATE PROCEDURE [dbo].[pick_restaurant]
+AS
+DECLARE @count INT,
+		    @result INT,
+		    @freq INT
+SET @count = (SELECT COUNT(r_name) FROM restaurants)+1
+SET @result = (SELECT FLOOR(RAND()*(@count-1)+1))
+SET @freq = (SELECT FREQUENCY FROM Restaurants 
+			 WHERE ID = @result)+1
+UPDATE Restaurants
+SET Frequency = @freq
+	WHERE ID = @result
+ 
+SELECT r_Name, Frequency FROM dbo.restaurants  
+	WHERE ID = @result
+
+  ---
+
+  CREATE PROCEDURE pick_joke
+  AS
+  DECLARE @count INT,
+          @result INT,
+          @freq INT,
+          @freqCount INT
+  SET @count = (SELECT COUNT(jokes) FROM jokes)+1
+  SET @result = (SELECT FLOOR(RAND()*(@count-1)+1))
+  SET @freq = (SELECT frequency FROM jokes WHERE jokeID = @result)+1
+  SET @freqCount = (SELECT COUNT(Frequency) FROM jokes)+1
+  UPDATE jokesSET frequency = @freq WHERE ID = @result
+  SELECT jokes, frequency FROM pick_joke WHERE jokeID = @result
+
+---
+
+  CREATE PROCEDURE pick_joke
+  AS
+  DECLARE @count INT,
+          @result INT,
+          @freq INT,
+          @freqCount INT
+  SET @count = (SELECT COUNT(jokeID) FROM jokes)+1;
+  SET @result = (SELECT FLOOR(RAND()*(@count-1)+1));
+  SET @freq = (SELECT frequency FROM jokes WHERE jokeID = @result)+1;
+  SET @freqCount = (SELECT SUM(frequency) FROM jokes)+1;
+  UPDATE jokes SET frequency = @freq WHERE ID = @result;
+  SELECT jokes, frequency FROM pick_joke WHERE jokeID = @result;
+
+
+    $countJokes = 'SELECT COUNT(jokes) FROM jokes)+1';
+    $result = 'SELECT FLOOR(RAND()*($countJokes-1)+1)';
+    $freq = 'SELECT frequency FROM jokes WHERE jokeID = $result+1';
+    $sqlUpdate = 'UPDATE jokes SET frequency = $freq WHERE jokeID = $result';
+    $sql = 'SELECT jokes FROM jokes WHERE jokeID = $result';
+
+
+---
+    $result = $row['jokeID'];
+    $freq = $row['frequency'];
+
+    $sqlUpdate = 'UPDATE jokes SET frequency = $freq+1 WHERE jokeID = $result';
+
+    ---
+    <?php
+  require_once '../../dbconfig/dbconfig_skamta.php';
+  try {
+    $pdo = new PDO ("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
+    $sql = 'SELECT jokeID, jokes, frequency
+            FROM jokes
+            ORDER BY RAND()
+            Limit 1';
+    $q = $pdo->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    while ($row = $q->fetch())
+        $result = $row['jokeID'];
+        $freq = $row['frequency'+1];  
+        echo htmlspecialchars($row['jokes']);
+        $sqlUpdate = 'UPDATE jokes SET frequency='$freq' WHERE jokeID='$result'';
+    endwhile;
+    } 
+  catch (PDOException $e) {
+  die("Could not connect to the database $dbname :" . $e->getMessage());
+  }
+?>

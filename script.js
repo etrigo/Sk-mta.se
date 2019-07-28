@@ -20,7 +20,7 @@ function joker(str) {
     document.getElementById("jokerBox").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "dbconnect.php?q="+str, true);
+  xhttp.open("GET", "dbconnect_new.php?q="+str, true);
   xhttp.send();
 }
 
