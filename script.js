@@ -6,21 +6,18 @@
   document.getElementById("siteUrl").value = "https://skamta.se/?id765";
 }*/
 
-function joker(str) {
+function joker() {
   var xhttp;
   var jokerBox = document.getElementById("jokerBox");
-  jokerBox.style.display = "block"; 
-  // if (str == "") {
-  //   document.getElementById("jokerBox").innerHTML = "";
-  //   return;
-  // }
+  jokerBox.style.display = "block";
+  document.getElementById("jokerButtonText").innerHTML = "igen!"; 
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("jokerBox").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "dbconnect_new.php?q="+str, true);
+  xhttp.open("GET", "dbconnect.php?q=", true);
   xhttp.send();
 }
 
