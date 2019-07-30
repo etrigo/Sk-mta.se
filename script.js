@@ -8,13 +8,11 @@
 
 function joker() {
   var xhttp;
-  var jokerBox = document.getElementById("jokerBox");
-  jokerBox.style.display = "block";
   document.getElementById("jokerButtonText").innerHTML = "igen!"; 
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-    document.getElementById("jokerBox").innerHTML = this.responseText;
+    document.getElementById("jokerBoxText").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "dbconnect.php?q=", true);

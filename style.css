@@ -59,6 +59,10 @@ header, footer {
   #footerLarge {
     display: block;
   }
+
+  #mainSec {
+    padding-bottom: 250px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -138,7 +142,7 @@ header, footer {
 
 /* font colors*/
 h1, h2, h3, h4, h5, h6 {color: #FFF5B0}
-p {color: #80d4ff;}
+p {color: #ffffff;}
 
 .strongHead {
   transform: rotate(-4deg);
@@ -177,79 +181,43 @@ p {color: #80d4ff;}
   width: 100%;
   text-align: center;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 20px;
+  
 }
-
-#helloBox {
-  position: relative;
-  display: block;
-  border:3px solid #80d4ff;
-  border-radius: 0 30px 0 30px;
-  color: #80d4ff;
-  font-weight: bold;
-  padding: 30px;
-  width: 80%;
-  max-width: 600px;
-  background-color: #ffffff;
-  font-size: 20px;
-  -webkit-animation-name: slideOut;
-  -webkit-animation-duration: 0.5s;
-  animation-name: slideOut;
-  animation-duration: 0.5s;
-}
-
-@-webkit-keyframes slideOut {
-  from {left: 0;}
-  to {left: -600px;}
-}
-
-@keyframes slideOut {
-  from {left: 0;}
-  to {left: -600px;}
-}
-
 
 .jokerBox {
   margin: auto;
-  border-top: 3px solid #FFC7B0;
-  border-right: 7px solid #FFC7B0;
-  border-bottom: 7px solid #80d4ff;
-  border-left: 3px solid #80d4ff;
-  border-radius: 0 30px 0 30px;
-  color: #80d4ff;
+  margin-bottom: 30px;
+  position: relative;
   font-weight: bold;
+  border-right: 7px solid #FFC7B0;
+  border-left: 7px solid #FFC7B0;
+	background: #80d4ff;
+  border-radius: 4px 30px 4px 30px;
   padding: 30px;
   width: 80%;
-  max-width: 600px;
+  max-width: 400px;
   min-height: 100px;
-  background-color: #ffffff;
-  font-size: 20px;
-  /* max-height: 500px; */
-  transition: 2s;
-  /* transition: display 0.6s, opacity 0.6s, max-height 0.6s linear; */
-  display: none;
-  /* opacity: 1; */
-  /* -webkit-animation-name: slideDown;
-  -webkit-animation-duration: 0.8s;
-  animation-name: slideDown;
-  animation-duration: 0.8s; */
 }
 
-/* @-webkit-keyframes slideDown {
-  from {bottom: -300px; opacity: 0}
-  to {bottom: 0; opacity: 1}
+.jokerBox:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 36px solid transparent;
+	border-top-color: #80d4ff;
+	border-bottom: 0;
+	margin-left: -36px;
+	margin-bottom: -36px;
 }
-
-@keyframes slideDown {
-  from {bottom: -300px;}
-  to {bottom: 0;}
-} */
 
 
 #jokerButton {
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 30px;
   height: 175px;
   width: 175px;
   cursor: pointer;
@@ -309,8 +277,10 @@ footer {
 }
 
 #footerOne {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 #footPolyOne {
@@ -329,8 +299,8 @@ footer {
 
 #footerShareSite {
   position: absolute;
-  bottom: 65px;
-  right: 30px;
+  bottom: 10px;
+  right: 300px;
   cursor: pointer;
   }
 
@@ -340,7 +310,8 @@ footer {
 
 #footerGreeting {
   position: absolute;
-  bottom: 10px;
+  transform: rotate(-4deg);
+  bottom: 90px;
   left: 5px;
   text-align: left;
   padding: 10px;
