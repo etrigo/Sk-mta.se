@@ -7,8 +7,7 @@
 }*/
 
 function joker() {
-  var xhttp;
-  document.getElementById("jokerButtonText").innerHTML = "igen!"; 
+  var xhttp; 
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -17,6 +16,7 @@ function joker() {
   };
   xhttp.open("GET", "dbconnect.php?q=", true);
   xhttp.send();
+  document.getElementById("jokerButtonText").innerHTML = "igen!";
 }
 
 
