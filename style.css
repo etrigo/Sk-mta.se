@@ -229,10 +229,12 @@ p {color: #ffffff;}
   border: none;
   border-radius: 50%;
   box-shadow: 0 9px #999;
+  transition: 0.5s;
 }
 
 #jokerButton:hover {
   background-color: #80d4ff;
+  transition: 0.5s;
 }
 
 #jokerButton:active {
