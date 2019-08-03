@@ -12,9 +12,6 @@
     $row = $q->fetch();
     
       echo nl2br(str_replace('\\n', "\n", $row['jokes']));
-
-      echo <buttonphp
-    // $jokeUrl = "<a href='index.html/?ID={$row['jokeID']}'>'länk'</a>";
     
     
     $result = $row['jokeID'];
