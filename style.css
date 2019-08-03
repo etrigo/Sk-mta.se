@@ -185,6 +185,68 @@ p {color: #ffffff;}
   
 }
 
+.welcomeBox {
+  margin: auto;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: bold;
+  border-right: 7px solid #FFC7B0;
+  border-left: 7px solid #FFC7B0;
+	background: #80d4ff;
+  border-radius: 4px 30px 4px 30px;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px;
+  min-height: 100px;
+  padding: 20px;
+}
+
+.welcomeBox:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 36px solid transparent;
+	border-top-color: #80d4ff;
+	border-bottom: 0;
+	margin-left: -36px;
+	margin-bottom: -36px;
+}
+
+
+#welcomeButton {
+  margin: auto;
+  margin-top: 30px;
+  height: 175px;
+  width: 175px;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: 2px 2px 2px #999999;
+  outline: none;
+  background-color: #FFC7B0;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 9px #999;
+  transition: 0.5s;
+}
+
+#welcomeButton:hover {
+  background-color: #80d4ff;
+  transition: 0.5s;
+}
+
+#welcomeButton:active {
+  height: 165px;
+  width: 165px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
 .jokerBox {
   margin: auto;
   margin-bottom: 30px;

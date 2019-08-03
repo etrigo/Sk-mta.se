@@ -11,14 +11,48 @@ function joker() {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-    document.getElementById("jokerBoxText").innerHTML = this.responseText;
+    document.getElementById("mainSec").innerHTML = this.responseText;
     };
   };
   xhttp.open("GET", "dbconnect.php?q=", true);
   xhttp.send();
-  document.getElementById("jokerButtonText").innerHTML = "igen!";
 }
 
+function love() {
+  var xhttp; 
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("mainSec").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "dbLove.php?q=", true);
+  xhttp.send();
+}
+
+function hate() {
+  var xhttp; 
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("mainSec").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "dbHate.php?q=", true);
+  xhttp.send();
+}
+
+function report() {
+  var xhttp; 
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("mainSec").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "dbReport.php?q=", true);
+  xhttp.send();
+}
 
 function copyFunction() {
   document.getElementById("siteUrl").select();
